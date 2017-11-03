@@ -1,0 +1,15 @@
+{ "create": { "_index": "gmail_messages", "_type": "message", "_id": "123abc" }}
+{ "id": "123abc", "received": 1507584360, "from": "Someone Who Cares <someone@example.com>", "subject": "Hope you are doing well..." }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abd" } }
+{ "id": "123abd", "received": 1507584380, "from": "Daycare <suzy@daycaresrus.com>", "subject": "Book Sale this Friday" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abe" } }
+{ "id": "123abe", "received": 1507585532, "from": "Daycare <kate@daycaresrus.com>", "subject": "Needs Milk" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abf" } }
+{ "id": "123abf", "received": 1507584360, "from": "Someone Who Cares <someone2@example.com>", "subject": "Hope you are doing well...again" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abg" } }
+{ "id": "123abg", "received": 1507584014, "from": "Netfritz <spammer@juicenspam.com>", "subject": "Get this great deal" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abh" } }
+{ "id": "123abh", "received": 1507584765, "from": "Netfritz <spammer2@juicenspam.com>", "subject": "Summer blowout, great deal" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abi" } }
+{ "id": "123abi", "received": 1507584000, "from": "Someone Who Cares <someone3@example.com>", "subject": "Hope and Care" }
+{ "create" : { "_index" : "gmail_messages", "_type" : "message", "_id" : "123abj" } }

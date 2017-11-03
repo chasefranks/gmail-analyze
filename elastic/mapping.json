@@ -1,0 +1,24 @@
+{
+	"message": {
+		"properties": {
+	    	"gmail_id": {
+	      		"type": "keyword"
+	    	},
+	    	"received": {
+	      		"type": "date"
+	    	},
+	    	"from": {
+	      		"type": "text",
+	      		"analyzer": "simple",
+						"fields": {
+							"raw": {
+								"type": "keyword"
+							}
+						}
+	    	},
+	    	"subject": {
+	      		"type": "text"
+	    	}
+	  	}
+	}
+}

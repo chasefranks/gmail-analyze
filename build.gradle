@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'GmailIndexer'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+	integrationTest {
+		java {
+			srcDir file('src/integration-test/java')
+		}
+		resources{
+			srcDir file('src/integration-test/resources')
+		}
+		compileClasspath += main.output
+		runtimeClasspath += main.output
+	}
+}
+
+configurations {
+	integrationTestCompile.extendsFrom testCompile
+	integrationTestRuntime.extendsFrom testRuntime
+}
+
+dependencies {
+	// run time dependencies
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-gmail:v1-rev72-1.23.0'
+    compile 'org.elasticsearch.client:transport:5.6.2'
+    compile 'ch.qos.logback:logback-classic:1.2.3'    
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.0'
+    
+    // test time dependencies
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.apache.commons:commons-text:1.1'
+}
+
+task integrationTest(type: Test) {
+	testClassesDir = sourceSets.integrationTest.output.classesDir
+	classpath = sourceSets.integrationTest.runtimeClasspath
+}
+
+

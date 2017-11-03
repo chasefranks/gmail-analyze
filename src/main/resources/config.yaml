@@ -1,0 +1,10 @@
+# config for Gmail Analyzer
+---
+elastic:
+  host: "localhost"
+  port: 9300
+  mapping: "elastic/mapping.json"
+  
+gmail:
+  user: "me"
+  
